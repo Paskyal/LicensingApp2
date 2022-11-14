@@ -18,27 +18,31 @@ codeunit 80100 "EVT License Mgt"
         VerifiedLbl: label 'Verified';
     begin
         Rec.FindFirst();
-        if Rec.GetTenantId() = Rec."Tenant Id" then begin
-            Rec.CalcFields(PublicKey);
-            Rec.PublicKey.CreateInStream(PubKeyInStr);
-            PubKeyInStr.Read(PubKeyBase64);
-            PubKeyXmlString := Convert.FromBase64(PubKeyBase64);
+        if Rec.GetTenantId() <> Rec."Tenant Id" then
+            Error(WrongTenantIdErr) else
+            if Rec."Expiration Date" >= Today then begin
+                Rec.CalcFields(PublicKey);
+                Rec.PublicKey.CreateInStream(PubKeyInStr);
+                PubKeyInStr.Read(PubKeyBase64);
+                PubKeyXmlString := Convert.FromBase64(PubKeyBase64);
 
-            InputString := Rec."Tenant Id" + Rec."Expiration Date";
+                InputString := Rec."Tenant Id" + Format(Rec."Expiration Date");
 
-            Rec.CalcFields(SignatureBase64);
-            Rec.SignatureBase64.CreateInStream(SignatureBase64InStr);
-            SignatureBase64InStr.Read(SignatureBase64Txt);
-            TempBlob.CreateOutStream(SignatureOutStr);
-            Convert.FromBase64(SignatureBase64Txt, SignatureOutStr);
-            TempBlob.CreateInStream(SignatureInStr);
-            if CryptographyManagement.VerifyData(InputString, PubKeyXmlString, HashAlgorithm::SHA256, SignatureInStr) then
-                Message(VerifiedLbl) else
-                Message(NotVerifiedLbl);
-        end else
-            Error(WrongTenantIdErr);
+                Rec.CalcFields(SignatureBase64);
+                Rec.SignatureBase64.CreateInStream(SignatureBase64InStr);
+                SignatureBase64InStr.Read(SignatureBase64Txt);
+                TempBlob.CreateOutStream(SignatureOutStr);
+                Convert.FromBase64(SignatureBase64Txt, SignatureOutStr);
+                TempBlob.CreateInStream(SignatureInStr);
+                if CryptographyManagement.VerifyData(InputString, PubKeyXmlString, HashAlgorithm::SHA256, SignatureInStr) then
+                    Message(VerifiedLbl) else
+                    Message(NotVerifiedLbl);
+            end else
+                Error(LicenseIsExpiredErr);
+
     end;
 
     var
         WrongTenantIdErr: label 'Tenant Id doesn''t match';
+        LicenseIsExpiredErr: label 'The License is expired';
 }

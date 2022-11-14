@@ -28,7 +28,7 @@ table 80100 "EVT Licensing Setup"
             Caption = 'Starting Date';
             DataClassification = CustomerContent;
         }
-        field(6; "Expiration Date"; Text[50])
+        field(6; "Expiration Date"; Date)
         {
             Caption = 'Expiration Date';
             DataClassification = CustomerContent;

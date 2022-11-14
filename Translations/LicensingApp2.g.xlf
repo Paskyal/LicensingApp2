@@ -78,6 +78,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EVT Licensing Setup - Field Tenant Id - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1856208046 - NamedType 293273149" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The License is expired</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EVT License Mgt - NamedType LicenseIsExpiredErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1856208046 - NamedType 1251845321" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tenant Id doesn't match</source>
           <note from="Developer" annotates="general" priority="2"></note>
