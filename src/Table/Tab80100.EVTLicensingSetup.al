@@ -23,7 +23,7 @@ table 80100 "EVT Licensing Setup"
             Caption = 'Issue Date';
             DataClassification = CustomerContent;
         }
-        field(5; "Starting Date"; Text[50])
+        field(5; "Starting Date"; Date)
         {
             Caption = 'Starting Date';
             DataClassification = CustomerContent;
@@ -78,13 +78,6 @@ table 80100 "EVT Licensing Setup"
         if not Rec.IsEmpty then Rec.Delete();
     end;
 
-    procedure GetAadTenantId(): Text
-    var
-        AzureADTenant: codeunit "Azure AD Tenant";
-    begin
-        exit(AzureADTenant.GetAadTenantId());
-    end;
-
     procedure ImportLicense()
     var
         lisenseMgt: codeunit "EVT License Mgt";
@@ -105,5 +98,12 @@ table 80100 "EVT Licensing Setup"
     procedure GetTenantId(): Text
     begin
         exit(CopyStr(Rec.GetAadTenantId(), 1, MaxStrLen(TenantId())));
+    end;
+
+    procedure GetAadTenantId(): Text
+    var
+        AzureADTenant: codeunit "Azure AD Tenant";
+    begin
+        exit(AzureADTenant.GetAadTenantId());
     end;
 }

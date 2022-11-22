@@ -78,6 +78,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EVT Licensing Setup - Field Tenant Id - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1856208046 - NamedType 1984494400" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The licensed period has not yet started</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EVT License Mgt - NamedType IsNotYetValidErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1856208046 - NamedType 293273149" size-unit="char" translate="yes" xml:space="preserve">
           <source>The License is expired</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -102,51 +107,6 @@
           <source>Licensing Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - NamedType 672285416" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Choose one of the following options:</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - NamedType ChooseOptionLbl</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - NamedType 4161182907" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Xml Files|*.xml</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - NamedType ExtFilterTxt</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - NamedType 852396788" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You Imported a Public Key</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - NamedType KeyDownloadedLbl</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - NamedType 1099871011" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You Imported a Public Key</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - NamedType KeyImportedLbl</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - NamedType 3673381336" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Import</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - NamedType OptionImportLbl</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - NamedType 4136075149" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Import,Download</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - NamedType OptionsImportDownloadLbl</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - NamedType 1226254696" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You Imported a Private Key</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - NamedType PrivKeyImportedLbl</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - NamedType 172456838" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select a Private Key file</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - NamedType SelectPrivKeyTxt</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - NamedType 40426372" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select a Public Key file</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - NamedType SelectPubKeyTxt</note>
         </trans-unit>
         <trans-unit id="Page 418111466 - Control 1579714849 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the value of the Expiration Date field.</source>
@@ -207,26 +167,6 @@
           <source>Specifies the value of the Tenant Id field.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - Control Tenant Id - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - Action 3159749449 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Executes the Tenant ID action.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - Action GetTenantID - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - Action 3159749449 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Get tenant ID</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - Action GetTenantID - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - Action 3201496503 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Executes the Import from Stream action.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - Action Import - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 418111466 - Action 3201496503 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Import</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page EVT Licensing Setup - Action Import - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 418111466 - Action 2839364610 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Imports a License</source>
